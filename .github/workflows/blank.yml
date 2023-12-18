@@ -28,6 +28,9 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo THIS IS the Secret ===>> ${{secrets.test_secret}}
+        env:
+          PASSWORD: 'MYPASS'
+          secret: 'mysecret'
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
